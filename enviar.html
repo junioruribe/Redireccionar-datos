@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Redireccionar</title>
+    <style type="text/css">
+       div{ width: 600px; height:300px; margin:auto; border-style:double; text-align: center; background-color: aquamarine; font-style:oblique;}
+    
+       #div0{ background-color: rgb(134, 250, 250); height: 400px; width: 800px; border-radius: 100px; }
+    </style>
+    <script>
+        function enviar(){
+            //dinamico capturando valores de las cajas.
+            let nom,vr,cant;
+            nom=window.document.getElementById('txtNombre').value;
+            vr=window.document.getElementById('txtValor').value
+            cant=window.document.getElementById('txtCantidad').value
+
+            let url='Recibir.html?nom='+nom+'&vr='+vr+'&cant='+cant
+            window.open(url)
+        }
+
+    </script>
+</head>
+<body>
+    <div id="div0">
+        <div>
+            <br><br>
+            Nombre
+            <input type="text" id="txtNombre">
+            <br><br>
+            Valor
+            <input type="text" id="txtValor">
+            <br><br>
+            Cantidad
+            <input type="text" id="txtCantidad">
+            <br><br>
+            <input type="submit" value="Enviar" onclick="enviar()">
+        </div>
+    </div>
+    
+</body>
+</html>
